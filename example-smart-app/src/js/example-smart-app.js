@@ -153,13 +153,16 @@
     $('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
-    //$('#ldl').html(p.ldl);
-    //$('#hdl').html(p.hdl);
-    alert(window);
-    //alert(window.frameElement);
-    //alert(window.top);
+    $('#ldl').html(p.ldl);
+    $('#hdl').html(p.hdl);
     alert(window.parent);
-    alert(JSON.stringify(window.parent));
+    alert(window.parent.CERN_EventListener);
+    if(window.parent.CERN_EventListener){
+      window.parent.CERN_EventListener.fireEvent(null, window.parent.body, "SMART_APP_HI");
+    }
+    else {
+      alert("Could not find window.parent.CERN_EventListener");
+    }
   };
 
 })(window);
