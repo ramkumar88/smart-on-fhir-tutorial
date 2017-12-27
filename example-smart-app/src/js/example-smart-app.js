@@ -153,10 +153,11 @@
     $('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
-    $('#ldl').html(p.ldl);
-    $('#hdl').html(p.hdl);
-    alert(window.frameElement);
-    alert(window.top);
+    //$('#ldl').html(p.ldl);
+    //$('#hdl').html(p.hdl);
+    alert(window);
+    //alert(window.frameElement);
+    //alert(window.top);
     alert(window.parent);
     alert(JSON.stringify(window.parent));
   };
